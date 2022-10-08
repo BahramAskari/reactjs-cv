@@ -1,11 +1,23 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import {configureStore, ThunkAction, Action, getDefaultMiddleware,} from '@reduxjs/toolkit';
+
+//  import authReducer from './slices/authSlice';
+//  import usersReducer from './slices/users';
+
+
+const customizedMiddleware = getDefaultMiddleware({
+    serializableCheck: false
+})
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    //  auth: authReducer,
+    //  users: usersReducer,
   },
-});
+    middleware: (getDefaultMiddleware) =>  getDefaultMiddleware({
+        serializableCheck: false,
+    }),
+},
+    );
 
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;
