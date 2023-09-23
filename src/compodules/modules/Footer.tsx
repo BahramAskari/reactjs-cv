@@ -240,7 +240,7 @@ function Footer(props: Props) {
 
 
                         <Box display={"flex"} gap={{md: 3, xs: 1.2}}>
-                            <Link to={"/cv"}>
+                            <Link to={"/"}>
                                 <Typography fontSize={"small"} fontWeight={"bold"}
                                             color={currentPathname==="cv" ? "#f39660": "#2412ea"}>
                                     CV

@@ -1,7 +1,6 @@
 import {configureStore, ThunkAction, Action, getDefaultMiddleware,} from '@reduxjs/toolkit';
+import layoutReducer from './slices/layoutSlice';
 
-//  import authReducer from './slices/authSlice';
-//  import usersReducer from './slices/users';
 
 
 const customizedMiddleware = getDefaultMiddleware({
@@ -10,8 +9,7 @@ const customizedMiddleware = getDefaultMiddleware({
 
 export const store = configureStore({
   reducer: {
-    //  auth: authReducer,
-    //  users: usersReducer,
+      layout: layoutReducer,
   },
     middleware: (getDefaultMiddleware) =>  getDefaultMiddleware({
         serializableCheck: false,

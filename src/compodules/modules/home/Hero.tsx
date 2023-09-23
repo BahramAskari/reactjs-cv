@@ -4,9 +4,11 @@ import MainContainer from "../../../compodules/modules/MainContainer";
 import {AnimationOnScroll} from "react-animation-on-scroll"
 import "animate.css/animate.min.css"
 import {FacebookOutlined, Instagram, LinkedIn, Telegram, Twitter} from "@mui/icons-material";
+import useLanguage from "../../hooks/useLanguage";
 
 export default function HomeHero() {
     const theme = useTheme();
+    const lang = useLanguage();
     const is_greaterThan_lg = useMediaQuery(theme.breakpoints.up('lg'));
     const is_smallerThan_lg = useMediaQuery(theme.breakpoints.down('lg'));
     const is_greaterThan_xl = useMediaQuery(theme.breakpoints.up('xl'));
@@ -111,8 +113,12 @@ export default function HomeHero() {
                              gap={3}
                              //justifyContent={"space-between"}
                         >
-                            <Button variant={"contained"} color={"warning"} /*component={Link} */ href={`/reactjs/cv/resume.pdf`} size={is_greaterThan_midSmall ? "large": "small"} sx={{borderRadius: 20}}>Download CV</Button>
-                            <Button variant={"outlined"} color={"warning"} size={is_greaterThan_midSmall ? "large": "small"} sx={{borderRadius: 20}}>Contact Me</Button>
+                            <Button variant={"contained"} color={"warning"} /*component={Link} */ href={`/reactjs/cv/resume.pdf`} size={is_greaterThan_midSmall ? "large": "small"} sx={{borderRadius: 20}}>
+                                {lang.dictionary.buttons.downloadCV}
+                            </Button>
+                            <Button variant={"outlined"} color={"warning"} size={is_greaterThan_midSmall ? "large": "small"} sx={{borderRadius: 20}}>
+                                {lang.dictionary.buttons.contactMe}
+                            </Button>
                         </Box>
                     </Grid>
 
@@ -123,6 +129,9 @@ export default function HomeHero() {
                           textAlign={"center"}
                           height={"100%"}
                           position={is_greaterThan_midSmall ? "unset": "relative"}
+                          sx={{
+                              transform: lang.selectedLanguage==="fa" ? "scale(-1, 1)" : "unset"
+                          }}
                           //    display={is_greaterThan_midSmall ? "unset": "flex"}
                     >
 
