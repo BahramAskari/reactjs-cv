@@ -7,6 +7,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #fff;
   overflow-x: hidden;
+  min-height: 100vh;
+  /*
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+   */
+}
+
+html, body, #root {
+  min-height: 100vh;
+  margin: 0;
+  /*
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+   */
 }
 
 a{text-decoration: none;}

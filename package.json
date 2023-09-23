@@ -2,6 +2,13 @@
   "name": "cv",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/reactjs/cv",
+  "scripts": {
+    "start": "set PORT=3011 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
@@ -28,14 +35,9 @@
     "react-redux": "^8.0.4",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
+    "swiper": "^8.3.1",
     "typescript": "^4.8.4",
     "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "set PORT=3011 && react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

@@ -1,0 +1,150 @@
+[
+  {
+    "title": "NodeJS",
+    "description": "The best with readability, Structure.",
+    "color": "#22ee44",
+    "src": "/img/skill/nodejs.png",
+    "progress": 90
+  },
+  {
+    "title": "ReactJS",
+    "description": "The best with readability, Structure.",
+    "color": "rgb(124, 197, 217) none repeat scroll 0% 0%",
+    "src": "/img/skill/reactjs.png",
+    "progress": 95
+  },
+  {
+    "title": "NextJS",
+    "description": "The best with readability, Structure.",
+    "color": "#22ee44",
+    "src": "/img/skill/reactjs.png",
+    "progress": 95
+  },
+  {
+    "title": "MySQL",
+    "description": "The best with readability, Structure.",
+    "color": "rgba(0, 0, 0, 0) linear-gradient(to right, rgb(0, 117, 143), rgb(242, 145, 17)) repeat scroll 0% 0%",
+    "src": "/img/skill/mysql.png",
+    "progress": 80
+  },
+  {
+    "title": "MongoDB",
+    "description": "The best with readability, Structure.",
+    "color": "rgb(77, 179, 61) none repeat scroll 0% 0%",
+    "src": "/img/skill/mongodb.png",
+    "progress": 80
+  },
+  {
+    "title": "Sequelize",
+    "description": "The best ORM for mysql with readability, Structure.",
+    "color": "rgb(20, 60, 200) none repeat scroll 0% 0%",
+    "src": "/img/skill/sequelize.png",
+    "progress": 95
+  },
+  {
+    "title": "Mongoose",
+    "description": "The most popular ORM for mongodb with readability, Structure.",
+    "color": "rgb(20, 60, 200) none repeat scroll 0% 0%",
+    "src": "/img/skill/mongoose.png",
+    "progress": 95
+  },
+  {
+    "title": "HTML5",
+    "description": "Hyper Text Markup Language which is used as the based of any website structure UI.\n                  Not a programming language, but is the base of web pages.",
+    "color": "rgb(227, 76, 38) none repeat scroll 0% 0%",
+    "src": "/img/skill/html5.png",
+    "progress": 100
+  },
+  {
+    "title": "CSS3",
+    "description": "The best with readability, Structure.",
+    "color": "rgb(38, 77, 228) none repeat scroll 0% 0%",
+    "src": "/img/skill/css3.png",
+    "progress": 100
+  },
+  {
+    "title": "LESS",
+    "description": "The best with readability, Structure.",
+    "color": "rgb(38, 77, 228) none repeat scroll 0% 0%",
+    "src": "/img/skill/less.png",
+    "progress": 100
+  },
+  {
+    "title": "BOOTSTRAP",
+    "description": "The best with readability, Structure.",
+    "color": "rgb(122, 67, 182) none repeat scroll 0% 0%",
+    "src": "/img/skill/bootstrap.png",
+    "progress": 100
+  },
+  {
+  "title": "Material UI",
+  "description": "The best with readability, Structure.",
+  "color": "rgb(122, 67, 182) none repeat scroll 0% 0%",
+  "src": "/img/skill/mui.png",
+  "progress": 100
+},
+  {
+    "title": "Java Script",
+    "description": "The best with readability, Structure.",
+    "color": "rgb(240, 219, 79) none repeat scroll 0% 0%",
+    "src": "/img/skill/js.png",
+    "progress": 90
+  },
+  {
+    "title": "PHP",
+    "description": "The best with readability, Structure.",
+    "color": "rgb(137, 147, 190) none repeat scroll 0% 0%",
+    "src": "/img/skill/php.png",
+    "progress": 95
+  },
+  {
+    "title": "Frontity",
+    "description": "The best with readability, Structure.",
+    "color": "#22ee44",
+    "src": "/img/skill/html5.png",
+    "progress": 83
+  },
+  {
+    "title": "Wordpress",
+    "description": "The best with readability, Structure.",
+    "color": "#22ee44",
+    "src": "/img/skill/wordpress.png",
+    "progress": 65
+  },
+  {
+    "title": "Woocommerce",
+    "description": "The best with readability, Structure.",
+    "color": "#22ee44",
+    "src": "/img/skill/woocommerce.png",
+    "progress": 65
+  },
+  {
+    "title": "Laravel",
+    "description": "The best with readability, Structure.",
+    "color": "rgb(251, 80, 59) none repeat scroll 0% 0%",
+    "src": "/img/skill/laravel.png",
+    "progress": 70
+  },
+  {
+    "title": "SocketIO",
+    "description": "The best with readability, Structure.",
+    "color": "rgb(0, 0, 0) none repeat scroll 0% 0%",
+    "src": "/img/skill/socketio.png",
+    "progress": 95
+  },
+
+  {
+    "title": "Redis",
+    "description": "The best with readability, Structure.",
+    "color": "rgb(216, 44, 32) none repeat scroll 0% 0%",
+    "src": "/img/skill/redis.png",
+    "progress": 87
+  },
+  {
+    "title": "Git",
+    "description": "The best with readability, Structure.",
+    "color": "rgb(243, 79, 41) none repeat scroll 0% 0%",
+    "src": "/img/skill/git.png",
+    "progress": 80
+  }
+]

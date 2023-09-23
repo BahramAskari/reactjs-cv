@@ -20,7 +20,7 @@ interface Props  {
 }
 
 
-const MainContainer : React.FC<Props> = ({
+const MainContainer: React.FC<Props> = ({
     sx, children, boxProps
 }) => {
     useEffect(  ()=>{
@@ -36,7 +36,7 @@ const MainContainer : React.FC<Props> = ({
             pl = {{lg: 35, sm: 12, xs: 6}}
             pr= {{lg: 35, sm: 12, xs: 6}}
             {...boxProps}
-            //  bgcolor={props?.bgColor ? props.bgColor : "transparent"}
+            //  bgcolor={props?.bgColor ? props.bgColor: "transparent"}
             // {...props.boxProps}
             sx={{
                 ...sx,

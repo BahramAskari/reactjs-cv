@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import {Box, Button, Grid, Icon, Typography} from "@mui/material";
+import {Box, Button, Divider, Grid, Icon, Typography} from "@mui/material";
 import MainContainer from "../../../compodules/modules/MainContainer";
 import {
+    BookOutlined,
     CodeOutlined,
     EmailOutlined, EmailRounded,
     LandscapeOutlined,
@@ -18,16 +19,36 @@ export default function HomeAbout() {
             <Box height={"100%"}>
 
 
-                <Box display={"flex"} justifyContent={"space-between"}
+                <Grid container
+                      mt={{md: 0, xs:2}}
+                      justifyContent={"space-between"}
                      borderRadius={20}
-                     p={{lg: 6, sm: 4, xs: 2}}
+                     p={{lg: 4, sm: 3, xs: 2}}
                      boxShadow={"-1px 11px 10px 5px rgba(58,63,60,0.48)"}
                      bgcolor={"#fff"}
                      position={"relative"}
-                     sx={{transform: {md: "translateY(-69px)", xs: "unset"}}}
+                     sx={{
+                         transform: {md: "translateY(-69px)", xs: "unset"},
+                         alignItems: 'center',
+                         //width: 'fit-content',
+                         border: (theme) => `1px solid ${theme.palette.divider}`,
+                        // borderRadius: 1,
+                         bgcolor: 'background.paper',
+                         color: 'text.secondary',
+                         '& svg': {
+                         m: 1.5,
+                     },
+                         '& hr': {
+                         mx: 0.5,
+                     },
+                     }}
                 >
 
-                    <Box display={"flex"} alignItems={"center"} gap={1.2}>
+                    <Grid item
+                          md={3.8}
+                         // sm={5.7}
+                          xs={12}
+                          display={"flex"} alignItems={"center"} gap={1.2}>
                         <Box>
                             <WorkspacePremiumOutlined color={"warning"} fontSize={"large"} />
                         </Box>
@@ -35,9 +56,15 @@ export default function HomeAbout() {
                             <Typography fontWeight={"bold"}>3 Years Experience</Typography>
                             <Typography color={"#f39660"}>Professional</Typography>
                         </Box>
-                    </Box>
+                    </Grid>
 
-                    <Box display={"flex"} alignItems={"center"} gap={1.2}>
+                    <Divider orientation={"vertical"} flexItem  />
+
+                    <Grid item
+                          md={3.8}
+                        //  sm={5.7}
+                          xs={12}
+                          display={"flex"} alignItems={"center"} gap={1.2}>
                         <Box>
                             <WorkspacePremiumOutlined /*transform={"scale(1.5)"}*/ /* color={"primary"} */
                                                       fontSize={"large"}
@@ -47,6 +74,7 @@ export default function HomeAbout() {
                                                           color: "#fff",
                                                           width: 45,
                                                           height: 45,
+                                                          p: .8,
                                                           '& svg': {
                                                               fontSize: 100
                                                           }
@@ -57,9 +85,14 @@ export default function HomeAbout() {
                             <Typography fontWeight={"bold"}>3 Years Experience</Typography>
                             <Typography color={"#f39660"}>Professional</Typography>
                         </Box>
-                    </Box>
+                    </Grid>
 
-                    <Box display={"flex"} alignItems={"center"} gap={1.2}>
+                    <Divider orientation={"vertical"} flexItem   />
+
+                    <Grid item
+                          md={3.8}
+                          xs={12}
+                          display={"flex"} alignItems={"center"} gap={1.2}>
                         <Box>
                             <WorkspacePremiumOutlined color={"warning"} fontSize={"large"} />
                         </Box>
@@ -67,9 +100,11 @@ export default function HomeAbout() {
                             <Typography fontWeight={"bold"}>Support</Typography>
                             <Typography color={"#f39660"}>9/5</Typography>
                         </Box>
-                    </Box>
+                    </Grid>
 
-                </Box>
+                </Grid>
+
+
 
                 <Grid container
                       height={"100%"}
@@ -87,7 +122,7 @@ export default function HomeAbout() {
                     >
 
                         <Box>
-                            <img src={"./home-about.jpg"} alt={"POster"}
+                            <img src={"/reactjs/cv/img/sections/home-about.png"} alt={"POster"}
                                  style={{
                                      objectFit: "cover",
                                      maxWidth: "100%",
@@ -133,31 +168,61 @@ export default function HomeAbout() {
                         {/* Begin contact info */}
                             <Grid container // justifyContent={"space-between"}
                                 mt={2}
-                                gap={{lg: 8, md: 7, sm: 4, xs: 2}}
+                                gap={{lg: 4, md: 3, sm: 2, xs: 2}}
                             >
                                 <Grid item >
                                     <Box display={"flex"} gap={1.2}>
-                                        <Person2Rounded color={"warning"} />
-                                        <Typography fontWeight={"bold"}>Name</Typography>
+                                        <AnimationOnScroll animateIn="animate__fadeInRightBig">
+                                            <Person2Rounded color={"warning"} />
+                                        </AnimationOnScroll>
+                                        <AnimationOnScroll animateIn="animate__fadeInRightBig">
+                                            <Typography fontWeight={"bold"}>Name</Typography>
+                                        </AnimationOnScroll>
                                     </Box>
                                     <Box display={"flex"} gap={1.2} mt={1.2}>
+                                        <AnimationOnScroll animateIn="animate__fadeInRightBig">
                                         <PhoneRounded color={"warning"} />
+                                        </AnimationOnScroll>
+                                        <AnimationOnScroll animateIn="animate__fadeInRightBig">
                                         <Typography fontWeight={"bold"}>Phone</Typography>
+                                        </AnimationOnScroll>
                                     </Box>
                                     <Box display={"flex"} gap={1.2} mt={1.2}>
+                                        <AnimationOnScroll animateIn="animate__fadeInRightBig">
                                         <EmailRounded color={"warning"} />
+                                        </AnimationOnScroll>
+                                        <AnimationOnScroll animateIn="animate__fadeInRightBig">
                                         <Typography fontWeight={"bold"}>Email</Typography>
+                                        </AnimationOnScroll>
                                     </Box>
                                 </Grid>
                                 <Grid item >
+                                    <AnimationOnScroll animateIn="animate__fadeInRightBig">
                                     <Box>:</Box>
+                                    </AnimationOnScroll>
+                                    <AnimationOnScroll animateIn="animate__fadeInRightBig">
                                     <Box mt={1.2}>:</Box>
+                                    </AnimationOnScroll>
+                                    <AnimationOnScroll animateIn="animate__fadeInRightBig">
                                     <Box mt={1.2}>:</Box>
+                                    </AnimationOnScroll>
                                 </Grid>
                                 <Grid item >
-                                    <Box><Typography variant={"subtitle2"}>Bahram Askari</Typography></Box>
-                                    <Box mt={1.2}><Typography variant={"subtitle2"}>+98-901-181-3706</Typography></Box>
-                                    <Box mt={1.2}><Typography variant={"subtitle2"}>bahram.askari97@gmail.com</Typography></Box>
+                                    <Box>
+                                        <AnimationOnScroll animateIn="animate__fadeInRightBig">
+                                        <Typography variant={"subtitle2"}>Bahram</Typography>
+                                        </AnimationOnScroll>
+                                    </Box>
+                                    <Box mt={1.2}>
+                                        <AnimationOnScroll animateIn="animate__fadeInRightBig">
+                                        <Typography variant={"subtitle2"}>+98-901-181-3706</Typography>
+                                        </AnimationOnScroll>
+                                    </Box>
+                                    <Box mt={1.2}>
+                                        <AnimationOnScroll animateIn="animate__fadeInRightBig">
+                                        <Typography variant={"subtitle2"}>bahram.askari97@gmail.com</Typography>
+                                        </AnimationOnScroll>
+                                    </Box>
                                 </Grid>
                             </Grid>
                         {/* End contact info */}
@@ -179,6 +244,12 @@ export default function HomeAbout() {
                                     </Typography>
                                 </Box>
                                 <Box display={"flex"} gap={1.2}>
+                                    <BookOutlined color={"warning"} />
+                                    <Typography fontWeight={"bold"}>
+                                        Study
+                                    </Typography>
+                                </Box>
+                                <Box display={"flex"} gap={1.2}>
                                     <LandscapeOutlined color={"warning"} />
                                     <Typography fontWeight={"bold"}>
                                         Mountain
@@ -190,12 +261,14 @@ export default function HomeAbout() {
                                         Sea
                                     </Typography>
                                 </Box>
+                                {/*
                                 <Box display={"flex"} gap={1.2}>
                                     <SentimentSatisfiedOutlined color={"warning"} />
                                     <Typography fontWeight={"bold"}>
                                         Laugh
                                     </Typography>
                                 </Box>
+                                */}
 
                             </Box>
                         </Box>

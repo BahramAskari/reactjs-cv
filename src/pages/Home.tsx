@@ -7,79 +7,62 @@ import HomeAbout from "../compodules/modules/home/About";
 import {FacebookOutlined, Instagram, Telegram, Twitter} from "@mui/icons-material";
 import HomePortfolio from "../compodules/modules/home/Portfolio";
 import HomeSkills from "../compodules/modules/home/Skills";
+import Footer from "../compodules/modules/Footer";
+import ReviewCard from "../compodules/components/ReviewCard";
+import HomeReviews from "../compodules/modules/home/Reviews";
 
 export default function Home() {
     return (
-
         <Box>
 
+            {/* Section -> Header */}
             <MainContainer boxProps={{borderRadius: 100,}} sx={{
               //  pl: 2,
             }}>
                 <Header />
             </MainContainer>
 
+            {/* Section -> Hero */}
             <MainContainer sx={{
                 bgcolor: "#f2f3f7",
-                height: "calc(100vh - 68px)",
+                height: {lg: "calc(100vh - 68px)", xs: "auto"},
                 position: "relative",
             }}>
-                <Box position={"absolute"}
-                     left={20}
-                     sx={{
-                         top: "50%",
-                         transform: "translateY(-50%)",
-                     }}
-                >
-
-                    <Box>
-                        <IconButton color={"secondary"}>
-                            <FacebookOutlined />
-                        </IconButton>
-                    </Box>
-
-                    <Box>
-                        <IconButton color={"info"}>
-                            <Twitter />
-                        </IconButton>
-                    </Box>
-
-                    <Box>
-                        <IconButton color={"primary"}>
-                            <Telegram />
-                        </IconButton>
-                    </Box>
-
-                    <Box>
-                        <IconButton color={"success"}>
-                            <Instagram />
-                        </IconButton>
-                    </Box>
-
-                </Box>
-
                <HomeHero />
-
             </MainContainer>
 
-            {/* Section */}
+            {/* Section -> About */}
             <MainContainer sx={{
+               // pt: 4,
+                pb: 4,
                // height: "100vh",
             }}>
                 <HomeAbout />
             </MainContainer>
 
+            {/* Section -> Reviews */}
             <MainContainer sx={{
+                bgcolor: "#f2f3f7",
+                py: 6,
+                // height: "100vh",
+            }}>
+                <HomeReviews />
+            </MainContainer>
+
+            {/* Section -> Skills */}
+            <MainContainer sx={{
+                //bgcolor: "#f2f3f7",
+                pt: 6,
+                pb: 6,
                 // height: "100vh",
             }}>
                 <HomeSkills />
             </MainContainer>
 
-            <MainContainer sx={{
-              // height: "100vh",
-            }}>
-                <HomePortfolio />
-            </MainContainer>
+
+
+            {/* Section -> Footer */}
+                <Footer />
 
         </Box>
 

@@ -1,0 +1,27 @@
+[
+
+  {
+    "title": "FrontEnd Pack",
+    "slug": "frontend",
+    "description": "The best with readability, Structure.",
+    "packs": [
+      {
+        "title": "Starter",
+        "price": 60,
+        "currency": "$",
+        "skills": []
+      }, {
+        "title": "Intermediate",
+        "price": 95,
+        "currency": "$",
+        "skills": []
+      }, {
+        "title": "Premium",
+        "price": 120,
+        "currency": "$",
+        "skills": []
+      }
+    ]
+  }
+
+]

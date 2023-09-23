@@ -28,6 +28,7 @@ import {
     NotificationsActive as NotificationActiveIcon, Image,
 } from "@mui/icons-material"
 import {isEmpty, isNil} from "lodash";
+import MainContainer from "./MainContainer";
 
 
 
@@ -87,7 +88,7 @@ const Item2 = (props: Props)=>{
 /**
  * @Component SidebarMenu
  */
-function Header(props: Props) {
+function Footer(props: Props) {
     let location = useLocation();
     const [currentPathname, setCurrentPathname] = useState("home")
 
@@ -123,22 +124,31 @@ function Header(props: Props) {
     }, [])
 
     return (
+        <MainContainer
+            sx={{
+            bgcolor: "#f2f3f7",
+            py: {xl: 4, sm: 2, xs:1},
+                position: "relative",
+                bottom: 0,
+                width: "100%",
+            // height: "100vh",
+        }}>
+
         <Box
+            component={"footer"}
+            //  px={4}
+           // height={HEADER_HEIGHT}
+
             //position={"fixed"}
             //width={"100%"}
             //zIndex={999999999999}
             //top={0}
-            height={HEADER_HEIGHT}
            // pl={{lg: 35, sm: 12, xs: 6}}
            // pr={{lg: 35, sm: 12, xs: 6}}
             sx={{
                 width: "100%",
                 //padding: "0 0 0 0",
-                bgcolor: "#fff",
                 //border: "1px dotted #888"
-            }}>
-            <header style={{
-                height:"100%", position: "relative", top: 0,
             }}>
 
                 <Grid container
@@ -201,14 +211,21 @@ function Header(props: Props) {
 
 
                     </Grid>
-                    {/* End Search */}
+                    {/* End Logo */}
+
+
+                    {/* Begin Copyright */}
+                    <Grid item >
+                        <Typography variant={"h6"} fontSize={"smaller"}>
+                            @Copyright 2022, october. All rights reserved by Bahram.org
+                        </Typography>
+                    </Grid>
+                    {/* End Copyright */}
 
 
                     {/* Begin Menu Links */}
                     <Grid item
-                        //  md={8}
                         //  sm={9}
-                        //  xs={12}
                           alignItems={"center"}
                           sx={{
                               ".MuiInput-root:focus": {
@@ -223,10 +240,10 @@ function Header(props: Props) {
 
 
                         <Box display={"flex"} gap={{md: 3, xs: 1.2}}>
-                            <Link to={"/"}>
+                            <Link to={"/cv"}>
                                 <Typography fontSize={"small"} fontWeight={"bold"}
-                                            color={( isEmpty(currentPathname) || isNil(currentPathname) || currentPathname==="home" ) ? "#f39660": "#2412ea"}>
-                                    Home
+                                            color={currentPathname==="cv" ? "#f39660": "#2412ea"}>
+                                    CV
                                 </Typography>
                             </Link>
                             <Link to={"/portfolio"}>
@@ -241,64 +258,18 @@ function Header(props: Props) {
                                     Services
                                 </Typography>
                             </Link>
-                            {/*
-                               <Link to={"/solutions"}>
-                                <Typography fontSize={"small"} fontWeight={"bold"}
-                                            color={currentPathname==="solutions" ? "#f39660": "#2412ea"}>
-                                    Solutions
-                                </Typography>
-                            </Link>         <Link to={"/ticketing"}>
-                                <Typography fontSize={"small"} fontWeight={"bold"}
-                                            color={currentPathname==="ticketing" ? "#f39660": "#2412ea"}>
-                                    Ticketing System
-                                </Typography>
-                            </Link>         <Link to={"/chatApp"}>
-                                <Typography fontSize={"small"} fontWeight={"bold"}
-                                            color={currentPathname==="chatApp" ? "#f39660": "#2412ea"}>
-                                    Chat App
-                                </Typography>
-                            </Link>         <Link to={"/accounting"}>
-                                <Typography fontSize={"small"} fontWeight={"bold"}
-                                            color={currentPathname==="accounting" ? "#f39660": "#2412ea"}>
-                                    Accounting
-                                </Typography>
-                            </Link>   <Link to={"/ecommerce"}>
-                                <Typography fontSize={"small"} fontWeight={"bold"}
-                                            color={currentPathname==="ecommerce" ? "#f39660": "#2412ea"}>
-                                    Ecommerce
-                                </Typography>
-                            </Link>
-
-                               <Link to={"/intro"}>
-                                <Typography fontSize={"small"} fontWeight={"bold"}
-                                            color={currentPathname==="intro" ? "#f39660": "#2412ea"}>
-                                    My Intro
-                                </Typography>
-                            </Link>
-                            <Link to={"/testimonial"}>
-                                <Typography fontSize={"small"} fontWeight={"bold"}
-                                            color={currentPathname==="testimonial" ? "#f39660": "#2412ea"}>
-                                    Testimonial
-                                </Typography>
-                            </Link>
                             <Link to={"/pricing"}>
                                 <Typography fontSize={"small"} fontWeight={"bold"}
                                             color={currentPathname==="pricing" ? "#f39660": "#2412ea"}>
                                     Pricing
                                 </Typography>
                             </Link>
+                            {/*
                             <Link to={"/blog"}>
                                 <Typography fontSize={"small"} fontWeight={"bold"} color={"#2412ea"}>Blog</Typography>
                             </Link>
                             */}
                         </Box>
-
-                        <Button variant={"contained"} color={"warning"}
-                                size={"large"}
-                                sx={{borderRadius: 20}}
-                        >
-                            Hire Me
-                        </Button>
 
                     </Grid>
                     {/* End Menu Links */}
@@ -307,11 +278,12 @@ function Header(props: Props) {
                 </Grid>
 
 
-            </header>
 
         </Box>
+
+        </MainContainer>
     );
 }
 
 
-export default Header;
+export default Footer;
